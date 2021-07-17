@@ -19,16 +19,16 @@ spec:
         image: grunya404/homework1:latest
         ports:
            - name: web
-             containerPort: 8080
+             containerPort: 8000
         livenessProbe:
             httpGet:
-              path: /health
-              port: 8080
+              path: /live_probe
+              port: 8000
             initialDelaySeconds: 3
             periodSeconds: 3
         readinessProbe:
             httpGet:
-              path: /health
-              port: 8080
+              path: /read_probe
+              port: 8000
             initialDelaySeconds: 5
             periodSeconds: 10

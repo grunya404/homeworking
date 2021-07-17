@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: arch-homework
   annotations:
-    nginx.ingress.kubernetes.io/configuration-snippet: rewrite ^/otusapp/(.*)$ /hello/$1 last;
+    nginx.ingress.kubernetes.io/configuration-snippet: rewrite ^/otusapp/dgrunskiy/(.*)$ /hello/$1 last;
 spec:
   rules:
     - host: arch.homework
